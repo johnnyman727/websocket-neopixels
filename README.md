@@ -1,7 +1,7 @@
 websocket-neopixels
 ===================
 
-This project demonstrates how to set up a server on Tessel that allows you to send arbitrary animations to Neopixels with a websocket. [Neopixels](http://www.adafruit.com/category/168) is Adafruit's brand for strips of individually addressanle RGB LEDs.
+This project demonstrates how to set up a server on Tessel that allows you to send arbitrary animations to Neopixels with a websocket. [Neopixels](http://www.adafruit.com/category/168) is Adafruit's brand for strips of individually addressable RGB LEDs.
 
 It uses the [`nodejs-websocket`](https://github.com/sitegui/nodejs-websocket) library to create the server and the [`neopixels`](https://github.com/tessel/neopixels) library to write the animations. 
 
