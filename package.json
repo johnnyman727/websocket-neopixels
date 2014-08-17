@@ -1,0 +1,12 @@
+{
+  "name": "websocket-neopixels",
+  "version": "0.0.1",
+  "description": "A simple Tessel script that demonstrates neopixel animation over a websocket",
+  "main": "server.js",
+  "dependencies": {
+    "neopixels": "^0.0.1",
+    "nodejs-websocket" : "^0.1.5"
+  },
+  "author": "Jon McKay <jon@technical.io>",
+  "license": "MIT"
+}
