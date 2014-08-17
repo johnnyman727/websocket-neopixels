@@ -1,9 +1,9 @@
 
 var ws = require("nodejs-websocket"),
     Neopixels = require('neopixels'),
-    neopixels = new Neopixels();
-    tessel = require('tessel');
-    port = 8000,
+    neopixels = new Neopixels(),
+    tessel = require('tessel'),
+    port = 8000;
 
 // Create the websocket server, provide connection callback
 var server = ws.createServer(function (conn) {
