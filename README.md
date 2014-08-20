@@ -1,3 +1,4 @@
+![video](https://vine.co/v/M3upL5tBxqv)
 websocket-neopixels
 ===================
 
@@ -15,13 +16,13 @@ npm install websocket-neopixels
 
 Then, make sure you [install the Neopixels firmware](https://github.com/tessel/neopixels#installation) on your Tessel. Note that I have [a PR open](https://github.com/tessel/firmware/pull/71) to merge Neopixels support into the official firmware build but it hasn't landed at the time of this writing.
 
-Power your Neopixels and plug the data pin into G4 on Tessel.
+[Power your Neopixels](https://learn.adafruit.com/adafruit-neopixel-uberguide/power)(mine is just a small ring so I powered it with Tessel, PWR into VIN and GND into GND) and plug the data pin into G4 on Tessel.
 
 ## Usage
 
 `server.js` is a 30 line server that you'll run on Tessel. It simply opens a websocket server, parses any incoming streams, and routes the animation to the Neopixels.
 
-Make sure your Tessel is connected to WiFi (`tessel wifi -n SSID -p PASS`) before running the script. I didn't add any re/connect functionality to this example.
+Make sure your Tessel is connected to the same WiFi network as your PC (`tessel wifi -n SSID -p PASS`) before running the script. I didn't add any re/connect functionality to this example.
 
 Once connected to wifi, run it with `tessel run server.js`. 
 ```.js
@@ -61,7 +62,7 @@ The client gets run with Node.js. It connects to the Tessel's server, then waits
 
 Note that you need to change the address of the server to whatever your Tessel's IP Address is. You may also need to change the number of LEDs your animation. I was using a 24 pixel ring. 
 
-Wait until your Tessel reports that it's listening on port 8000, then run `tessel run client.js` to connect to the Tessel. You can start typing 'on' and 'off' into the command line to animate your Neopixels.
+Wait until your Tessel reports that it's listening on port 8000, then run `node client.js` to connect to the Tessel. You can start typing 'on' and 'off' into the command line to animate your Neopixels.
 ```.js
 var ws = require("nodejs-websocket");
 var port = 8000;

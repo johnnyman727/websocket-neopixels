@@ -22,6 +22,7 @@ offAnimation.fill(0x00);
 
 // When we get a connection (Put your Tessel's IP Address here!)
 var connection = ws.connect('ws://192.168.8.110:' + port, function() {
+  console.log('Connected to server! You may start typing "on" or "off"');
   // Pipe the data to our server
   process.stdin.on('data', function(data) {
     // Check for off command
