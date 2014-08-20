@@ -1,4 +1,3 @@
-![video](https://vine.co/v/M3upL5tBxqv)
 websocket-neopixels
 ===================
 
